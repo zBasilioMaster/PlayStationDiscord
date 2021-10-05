@@ -39,7 +39,7 @@ class SupportedGames
 		const checksum = this.store.get('etag');
 
 		const headers : any = {
-			'User-Agent': 'PlayStationDiscord (https://github.com/Tustin/PlayStationDiscord)'
+			'User-Agent': 'PlayStationDiscord (https://github.com/zBasilioMaster/PlayStationDiscord)'
 		};
 
 		if (checksum)
@@ -47,7 +47,7 @@ class SupportedGames
 			headers['If-None-Match'] = checksum;
 		}
 
-		axios.get(`https://raw.githubusercontent.com/Tustin/PlayStationDiscord-Games/master/games.json?_=${Date.now()}`, {
+		axios.get(`https://raw.githubusercontent.com/zBasilioMaster/PlayStationDiscord-Games/main/games.json?_=${Date.now()}`, {
 			headers
 		})
 		.then((response) => {
